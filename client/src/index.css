@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222.2, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222.2, 84%, 4.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222.2, 84%, 4.9%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222.2, 84%, 4.9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222.2, 84%, 4.9%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --ring: hsl(221, 83%, 53%);
+  --chart-1: hsl(221, 83%, 53%);
+  --chart-2: hsl(142, 76%, 36%);
+  --chart-3: hsl(46, 93%, 56%);
+  --chart-4: hsl(280, 80%, 56%);
+  --chart-5: hsl(17, 88%, 40%);
+  --sidebar: hsl(0, 0%, 100%);
+  --sidebar-foreground: hsl(222.2, 84%, 4.9%);
+  --sidebar-primary: hsl(221, 83%, 53%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(210, 40%, 96%);
+  --sidebar-accent-foreground: hsl(222.2, 84%, 4.9%);
+  --sidebar-border: hsl(214.3, 31.8%, 91.4%);
+  --sidebar-ring: hsl(221, 83%, 53%);
+  --font-sans: 'Montserrat', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 0.5rem;
+  --cyber-blue: hsl(221, 83%, 53%);
+  --cyber-dark: hsl(222.2, 84%, 4.9%);
+  --cyber-light: hsl(0, 0%, 100%);
+  --cyber-accent: hsl(199, 89%, 48%);
+}
+
+.dark {
+  --background: hsl(224, 71%, 4%);
+  --foreground: hsl(213, 31%, 91%);
+  --card: hsl(224, 71%, 4%);
+  --card-foreground: hsl(213, 31%, 91%);
+  --popover: hsl(224, 71%, 4%);
+  --popover-foreground: hsl(213, 31%, 91%);
+  --primary: hsl(213, 89%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(215, 27%, 17%);
+  --secondary-foreground: hsl(213, 31%, 91%);
+  --muted: hsl(215, 27%, 17%);
+  --muted-foreground: hsl(217, 10%, 65%);
+  --accent: hsl(215, 27%, 17%);
+  --accent-foreground: hsl(213, 89%, 53%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(213, 31%, 91%);
+  --border: hsl(215, 27%, 17%);
+  --input: hsl(215, 27%, 17%);
+  --ring: hsl(213, 89%, 53%);
+  --chart-1: hsl(213, 89%, 53%);
+  --chart-2: hsl(142, 76%, 36%);
+  --chart-3: hsl(46, 93%, 56%);
+  --chart-4: hsl(280, 80%, 56%);
+  --chart-5: hsl(17, 88%, 40%);
+  --sidebar: hsl(224, 71%, 4%);
+  --sidebar-foreground: hsl(213, 31%, 91%);
+  --sidebar-primary: hsl(213, 89%, 53%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(215, 27%, 17%);
+  --sidebar-accent-foreground: hsl(213, 89%, 53%);
+  --sidebar-border: hsl(215, 27%, 17%);
+  --sidebar-ring: hsl(213, 89%, 53%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(135deg, var(--cyber-blue) 0%, hsl(213, 89%, 45%) 100%);
+  }
+  
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-scrolled {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+  }
+  
+  .department-icon {
+    transition: all 0.3s ease;
+  }
+  
+  .department-icon:hover {
+    transform: scale(1.1);
+  }
+}
